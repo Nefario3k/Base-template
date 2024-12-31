@@ -1,0 +1,134 @@
+@media screen and (max-width: 1338px) {
+  body,
+  .v-application.v-theme--light {
+    section.page_main_section {
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  body,
+  .v-application.v-theme--light {
+    .hidden_lg {
+      display: none !important;
+    }
+    .visible_lg {
+      display: block !important;
+    }
+  }
+}
+@media screen and (max-width: 959px) {
+  body,
+  .v-application.v-theme--light {
+    .hidden_md {
+      display: none !important;
+    }
+    .visible_md {
+      display: block !important;
+    }
+    .appBarHeader {
+      .offerSection {
+        height: 2.2rem;
+        a {
+          svg {
+            width: 1.6rem;
+            height: 1.6rem;
+          }
+          span {
+            display: none;
+          }
+        }
+        span {
+          font-size: var(--text_xs);
+        }
+      }
+      .headerSection {
+        padding-top: 10px;
+        height: auto;
+        .main__container {
+          flex-wrap: wrap;
+          height: auto;
+          grid-gap: 5px;
+          & > .actionSection {
+            height: auto;
+            grid-gap: 16px;
+            .Btn {
+              &.accountBtn {
+                span ~ div {
+                  display: none !important;
+                }
+              }
+            }
+          }
+          .inputArea {
+            height: 4.4rem;
+            order: 2;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    section.page_main_section {
+      section.hero__top__section {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        .card_section {
+          display: none;
+        }
+        .carousel_section {
+          & > .v-carousel {
+            .v-window__container {
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 759px) {
+  body,
+  .v-application.v-theme--light {
+    .hidden_sm {
+      display: none !important;
+    }
+    .visible_sm {
+      display: block !important;
+    }
+
+    .generic__modal.v-overlay__content {
+      padding-inline: 0;
+      .generic__modal-card {
+        border-radius: 10px;
+        .topHeader {
+          padding-bottom: 12px;
+        }
+        .topHead {
+          font-size: var(--text_md) !important;
+        }
+        .card__wrapper {
+          padding-block: 16px 0 !important;
+          & > * {
+            padding-inline: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  body,
+  .v-application.v-theme--light {
+    .product_header {
+      flex-direction: column;
+      align-items: flex-start;
+      & > .flex {
+        width: 100%;
+        .Btn {
+          background-color: transparent !important;
+          max-width: 21.2rem !important;
+        }
+      }
+    }
+  }
+}

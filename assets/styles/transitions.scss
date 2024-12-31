@@ -1,0 +1,192 @@
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+.slide-fade-leave-active {
+  // transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.slide-left-enter-active {
+  transition: all 0.3s ease-out;
+}
+.slide-left-leave-active {
+  // transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+}
+.slide-left-enter-from,
+.slide-left-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+.slide-up-enter-active {
+  transition: all 0.3s ease-out;
+}
+.slide-up-leave-active {
+  // transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+}
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.slide-right-enter-active {
+  transition: all 0.3s ease-out;
+}
+.slide-right-leave-active {
+  // transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+}
+.slide-right-enter-from,
+.slide-right-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.slide-in-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-in-leave-active {
+  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-in-enter-from,
+.slide-in-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.fade-in-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-in-leave-active {
+  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.fade-in-enter-from,
+.fade-in-leave-to {
+  opacity: 0;
+  transform: scale(100);
+  transition:
+    transform 1s ease-in-out,
+    opacity 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.list-move, /* apply transition to moving elements */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
+  // z-index: -1;
+}
+
+// key frames and styles
+.transInBasic {
+  animation: transInBasic 0.3s ease-in-out;
+}
+.transInLongBasic {
+  animation: transInBasic 0.5s ease-in-out;
+}
+.transOutBasic {
+  animation: transOutBasic 0.3s ease-in-out;
+}
+.transleftBasic {
+  animation: transleftBasic 0.3s ease-in-out;
+}
+.transleftBasicDelay {
+  animation: transleftBasic 1s ease-in-out;
+}
+.transrightBasic {
+  animation: transrightBasic 0.3s ease-in-out;
+}
+.transScale {
+  animation: transScale 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes transInOp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes transInBasic {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes transOutBasic {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes transleftBasic {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes transrightBasic {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes transScale {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .transInBasic_md {
+    animation: transInBasic 0.3s ease-in-out;
+  }
+}

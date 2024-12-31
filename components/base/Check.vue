@@ -1,0 +1,46 @@
+<template>
+  <label @click="isCheck = !isCheck" class="flex items-center gap-3 cursor-pointer">
+    <svg
+      class="min-w-[2rem]"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_1475_33977)">
+        <path
+          d="M1.6665 6.66663C1.6665 3.9052 3.90508 1.66663 6.6665 1.66663H13.3332C16.0946 1.66663 18.3332 3.9052 18.3332 6.66663V13.3333C18.3332 16.0947 16.0946 18.3333 13.3332 18.3333H6.6665C3.90508 18.3333 1.6665 16.0947 1.6665 13.3333V6.66663Z"
+          :stroke="isCheck ? 'var(--text_dark2)' : 'var(--border_color7)'"
+          stroke-width="1.5"
+        />
+        <path
+          d="M6.6665 10.1389L8.29947 11.7718C8.62492 12.0972 9.1525 12.0973 9.478 11.7718L13.3332 7.91663"
+          :stroke="isCheck ? 'var(--text_dark2)' : 'transparent'"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_1475_33977">
+          <rect width="20" height="20" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <span v-if="title" class="capitalize text-sm text-font-3 mb-0">{{ title }}</span>
+  </label>
+</template>
+
+<script lang="ts" setup>
+import { ref } from "vue";
+defineProps({
+  title: {
+    type: String,
+    default: "",
+  },
+});
+const isCheck = ref(false);
+</script>
+
+<style></style>
