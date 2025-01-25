@@ -1,27 +1,23 @@
 <template>
   <svg
-    width="8"
-    height="14"
-    viewBox="0 0 8 14"
+    width="6"
+    height="10"
+    viewBox="0 0 6 10"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M6.99995 1C6.99995 1 1 5.4189 1 7C1 8.5812 7 13 7 13"
-      class="stroke"
-      :stroke="svgStroke"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      d="M5.79971 1.10636C6.42812 0.51287 5.43313 -0.426818 4.80472 0.216126L0.196378 4.51891C-0.0654595 4.7662 -0.0654595 5.21131 0.196378 5.4586L4.80472 9.81084C5.43313 10.4043 6.42812 9.46464 5.79971 8.87115L1.71504 5.01348L5.79971 1.10636Z"
+      :fill="svgFill"
     />
   </svg>
 </template>
 
 <script setup lang="ts">
 defineProps({
-  svgStroke: {
+  svgFill: {
     type: String,
-    default: "#141B34",
+    default: "var(--text_dark2)",
   },
 });
 </script>

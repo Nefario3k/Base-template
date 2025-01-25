@@ -1,10 +1,19 @@
-# Base Nuxt 3 Minimal Starter
+# Scelloo Vue|Nuxt 3 Minimal Starter
+
+## Description
+
+This project is built on vue.js (Nuxt3) and uses tailwind, scss and vuetify for styling and components as well as v-auto-animate for animation and vue inbuitl animation tags
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Requirement
+
+- Node 20+
+- Npm
+
 ## Setup
 
-Make sure to install the dependencies:
+Make sure to install the dependencies first:
 
 ```bash
 # npm
@@ -72,6 +81,10 @@ yarn preview
 bun run preview
 ```
 
+## Visuals
+
+![Index](./public/screenshort1.jpeg)
+
 ## Structure
 
 ```
@@ -86,7 +99,7 @@ Root/
 ├── public/
 │   ├── images/
 │   ├── svgs/
-│   └── screenshort1.jpg
+│   └── screenshort1.jpeg
 ├── server/
 ├── stores/
 ├── types/
@@ -94,4 +107,4 @@ Root/
 └── README.md
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Visit the [deployment](https://scelloo-blitz.netlify.app/) for a live preview.

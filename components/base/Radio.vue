@@ -1,25 +1,33 @@
 <template>
-  <label @click="isCheck = !isCheck" class="flex items-center gap-3 cursor-pointer">
+  <button v-auto-animate class="flex items-center gap-3 cursor-pointer">
     <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      v-if="checkValue"
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
-        d="M12 19.5C16.1421 19.5 19.5 16.1421 19.5 12C19.5 7.85786 16.1421 4.5 12 4.5C7.85786 4.5 4.5 7.85786 4.5 12C4.5 16.1421 7.85786 19.5 12 19.5ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
-        :fill="isCheck ? 'var(--text_dark2)' : 'var(--border_color7)'"
-      />
-      <path
-        d="M12 17.25C14.8995 17.25 17.25 14.8995 17.25 12C17.25 9.10051 14.8995 6.75 12 6.75C9.10051 6.75 6.75 9.10051 6.75 12C6.75 14.8995 9.10051 17.25 12 17.25Z"
-        :fill="isCheck ? 'var(--text_dark2)' : 'transparent'"
+        d="M7.5 15C11.6421 15 15 11.6421 15 7.5C15 3.35786 11.6421 0 7.5 0C3.35786 0 0 3.35786 0 7.5C0 11.6421 3.35786 15 7.5 15ZM7.5 9.75C8.74264 9.75 9.75 8.74264 9.75 7.5C9.75 6.25736 8.74264 5.25 7.5 5.25C6.25736 5.25 5.25 6.25736 5.25 7.5C5.25 8.74264 6.25736 9.75 7.5 9.75Z"
+        fill="#6D5BD0"
       />
     </svg>
+
+    <svg
+      v-else
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="7.5" cy="7.5" r="6.75" stroke="#8B83BA" stroke-width="1.5" />
+    </svg>
     <span v-if="title" class="capitalize text-sm text-font-3 mb-0">{{ title }}</span>
-  </label>
+  </button>
 </template>
 
 <script lang="ts" setup>
@@ -28,6 +36,10 @@ defineProps({
   title: {
     type: String,
     default: "",
+  },
+  checkValue: {
+    type: Boolean,
+    default: false,
   },
 });
 const isCheck = ref(false);

@@ -15,7 +15,7 @@ export default <Partial<Config>>{
         // background color variables
         main: {
           DEFAULT: "var(--bg_color)",
-          success: "var(--success_color)",
+          primary: "var(--primary_color)",
           1: "var(--bg_color)",
           2: "var(--bg_color2)",
           3: "var(--bg_color3)",
@@ -23,29 +23,21 @@ export default <Partial<Config>>{
           5: "var(--bg_color5)",
           6: "var(--bg_color6)",
           7: "var(--bg_color7)",
-          8: "var(--bg_color8)",
         },
         // text color variables
-        font: {
+        dark: {
           DEFAULT: "var(--text_light)",
-          danger: "var(--danger_color)",
           1: "var(--text_dark)",
           2: "var(--text_dark2)",
           3: "var(--text_dark3)",
           4: "var(--text_dark4)",
+          5: "var(--text_dark5)",
+          6: "var(--text_dark6)",
         },
         // border color variables
         bc: {
           DEFAULT: "var(--border_color)",
-          1: "var(--border_color)",
-          2: "var(--border_color2)",
-          3: "var(--border_color3)",
-          4: "var(--border_color4)",
-          5: "var(--border_color5)",
-          6: "var(--border_color6)",
-          7: "var(--border_color7)",
-          8: "var(--border_color8)",
-        },
+        }
       },
       // font size variables
       fontSize: {
@@ -58,12 +50,13 @@ export default <Partial<Config>>{
         h1: "var(--text_h1)",
         h2: "var(--text_h2)",
       },
+      // shadow variables
+      boxShadow: {
+        base: 'var(--shadow_base)',
+      },
       // font family variables
       fontFamily: {
-        Lora: "Lora, sans-serif !important",
         Inter: "Inter, sans-serif !important",
-        rhd: "'Red Hat Display', sans-serif !important",
-        cg: "'Cormorant Garamond', sans-serif !important",
       },
     },
   },

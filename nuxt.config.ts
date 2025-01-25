@@ -4,11 +4,11 @@ import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
     devtools: { enabled: false },
+    port: 3000,
     app: {
-        // pageTransition: { name: "page", mode: "out-in" },
         head: {
             titleTemplate: "%s",
-            title: "Base template",
+            title: "Scelloo",
             meta: [
                 // meta data
                 { charset: "UTF-8" },
@@ -21,17 +21,17 @@ export default defineNuxtConfig({
                     property: "og:title",
                     content: "Base template",
                 },
-                { hid: "og:url", property: "og:url", content: "/" },
+                { hid: "og:url", property: "og:url", content: "https://thenerfsenpai.netlify.app/" },
                 {
                     hid: "og:description",
                     property: "og:description",
                     content:
-                        "Base description",
+                        "This is for a demo",
                 },
                 {
                     hid: "og:image",
                     property: "og:image",
-                    content: "/logo.png",
+                    content: "https://thenerfsenpai.netlify.app/assets/img/live-app.png",
                 },
 
                 // twitter card
@@ -49,64 +49,63 @@ export default defineNuxtConfig({
                 {
                     hid: "twitter:url",
                     name: "twitter:url",
-                    content: "",
+                    content: "https://thenerfsenpai.netlify.app/",
                 },
                 {
                     hid: "twitter:description",
                     name: "twitter:description",
                     content:
-                        "Base description",
+                        "This is for a demo",
                 },
                 {
                     hid: "twitter:image",
                     name: "twitter:image",
-                    content: "/logo.png",
+                    content: "https://thenerfsenpai.netlify.app/assets/img/live-app.png",
                 },
 
-                { hid: "author", name: "author", content: "Kent Rentals.ng" },
+                { hid: "author", name: "author", content: "@DaviesOkpeta" },
                 {
                     hid: "description",
                     name: "description",
                     content:
-                        "Base description",
+                        "This is for a demo",
                 },
                 { name: "format-detection", content: "telephone=no" },
             ],
             link: [
-                // { rel: "manifest", href: "/site.webmanifest" },
                 {
                     hid: "icon",
                     rel: "icon",
                     type: "image/png",
-                    href: "/logo.png",
+                    href: "https://thenerfsenpai.netlify.app/favicon.png",
                 },
-                // {
-                //     rel: "icon",
-                //     type: "image/x-icon",
-                //     href: "/favicon.ico",
-                // },
-                // {
-                //     rel: "apple-touch-icon",
-                //     sizes: "180x180",
-                //     href: "/apple-touch-icon.png",
-                // },
-                // {
-                //     rel: "icon",
-                //     type: "image/png",
-                //     sizes: "32x32",
-                //     href: "/favicon-32x32.jpg",
-                // },
-                // {
-                //     rel: "icon",
-                //     type: "image/png",
-                //     sizes: "16x16",
-                //     href: "/favicon-16x16.png",
-                // },
+                {
+                    rel: "icon",
+                    type: "image/x-icon",
+                    href: "https://thenerfsenpai.netlify.app/favicon.ico",
+                },
+                {
+                    rel: "apple-touch-icon",
+                    sizes: "180x180",
+                    href: "https://thenerfsenpai.netlify.app/apple-touch-icon.png",
+                },
+                {
+                    rel: "icon",
+                    type: "image/png",
+                    sizes: "32x32",
+                    href: "https://thenerfsenpai.netlify.app/favicon-32x32.png",
+                },
+                {
+                    rel: "icon",
+                    type: "image/png",
+                    sizes: "16x16",
+                    href: "https://thenerfsenpai.netlify.app/favicon-16x16.png",
+                },
                 {
                     hid: "shortcut-icon",
                     rel: "shortcut icon",
                     type: "image/png",
-                    href: "/logo.png",
+                    href: "https://thenerfsenpai.netlify.app/favicon.png",
                 },
                 {
                     rel: "stylesheet",
@@ -138,9 +137,6 @@ export default defineNuxtConfig({
             });
         },
         //...
-        // "@nuxtjs/sitemap",
-        // "@sidebase/nuxt-auth",
-        "nuxt-aos",
         "@pinia/nuxt",
         "@nuxtjs/tailwindcss",
     ],
@@ -180,68 +176,6 @@ export default defineNuxtConfig({
         "~/assets/styles/transitions.scss",
         "~/assets/styles/responsive.scss",
     ],
-    // auth: {
-    //   baseURL: process.env.API_BASE_URL,
-    //   globalAppMiddleware: true,
-    //   provider: {
-    //     type: "local",
-    //     endpoints: {
-    //       signIn: { path: "login", method: "post" },
-    //       signOut: { path: "logout", method: "post" },
-    //       signUp: { path: "register", method: "post" },
-    //       getSession: { path: "account/profile", method: "get" },
-    //       // getSession: false,
-    //     },
-    //     token: {
-    //       signInResponseTokenPointer: "/auth_token",
-    //       // type: 'Bearer',
-    //       maxAgeInSeconds: 2592000,
-    //       autoLogout: false,
-    //     },
-    //     pages: {
-    //       login: "/",
-    //     },
-    //   },
-    // },
-
-    // sitemap: {
-    //   xsl: false,
-    //   hostname: process.env.LANDING_PAGE_URL,
-    //   cacheTime: 600000,
-    //   gzip: true,
-    //   i18n: true,
-    // },
-
-    // site: {
-    //   url: process.env.LANDING_PAGE_URL,
-    // },
-
-    aos: {
-        // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-        initClassName: "aos-init", // class applied after initialization
-        animatedClassName: "aos-animate", // class applied on animation
-        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 0, // offset (in px) from the original trigger point
-        // delay: 0, // values from 0 to 3000, with step 50ms
-        // duration: 50, // values from 0 to 3000, with step 50ms
-        // easing: "ease", // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-    },
     runtimeConfig: {
-        public: {
-            apiBase: process.env.API_BASE_URL,
-            env: {
-                API_BASE_URL: process.env.API_BASE_URL,
-            },
-        },
     },
 });

@@ -1,66 +1,25 @@
 export { };
 
 declare global {
-  interface NavItems {
-    title: string;
-    image: string;
-    link: string;
-    type: string;
-    svg: object;
-  }
-  interface CustomChart {
-    label: string;
-    size: number;
-    value: number;
-  }
-  interface DeleteContent {
-    title: string;
-    subText: string;
-    deleteType: string;
-    deleteObject: any;
-    modalType?: string;
-  }
-  interface FilesPreview {
-    id?: number;
-    name: any;
-    size: string | number;
-    val: any;
-    title?: string;
-  }
-  interface EventData {
-    prop: any;
-    header?: string;
-  }
-  interface ImageSelectProps {
-    multiple?: boolean;
-    maxSize?: number;
-    width?: number;
-    height?: number;
-  }
-  interface StatusToast {
+  interface TableDataArray {
     id: number;
-    duration?: number;
-    height: number | string;
-    isActive: boolean;
-    show: boolean;
-    timeoutId: any;
-    absolute: boolean;
-    svg: boolean;
-    border: boolean;
-    fixed: boolean;
-    right: number;
-    scale: number;
-    opacity: number;
-    bottom: number;
-    index: number;
-    color: string;
-    header: string;
-    headerColor: string;
-    subtext: string;
-    subtextColor: string;
-    borderColor: string;
-    svgStroke: string;
-    svgColor: string;
-    svgType: string;
+    first_name: string;
+    last_name: string;
+    email: string;
+    status: string;
+    last_login: string | Date;
+    payment: TableDataPayment,
+    activity_logs: TableDataActivityLogs[]
+  }
+  interface TableDataPayment {
+    status: string;
+    amount: number;
+    due_date: string | Date;
+    currency: string
+  }
+  interface TableDataActivityLogs {
+    date: string | Date;
+    action: string;
+    description: string;
   }
 }

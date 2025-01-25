@@ -24,11 +24,11 @@
   opacity: 0;
 }
 .slide-up-enter-active {
-  transition: all 0.3s ease-out;
+  transition: all 500mss ease-out;
 }
 .slide-up-leave-active {
   // transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-  transition: all 0.3s ease-in-out;
+  transition: all 100ms ease-in-out !important;
 }
 .slide-up-enter-from,
 .slide-up-leave-to {
@@ -97,7 +97,68 @@
    animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
-  // z-index: -1;
+  z-index: -1;
+  opacity: 0;
+}
+
+.list-up-move, /* apply transition to moving elements */
+.list-up-enter-active,
+.list-up-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-up-enter-from,
+.list-up-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-up-leave-active {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.list-down-move, /* apply transition to moving elements */
+.list-down-enter-active,
+.list-down-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-down-enter-from,
+.list-down-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-down-leave-active {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.list-reverse-move, /* apply transition to moving elements */
+.list-reverse-enter-active,
+.list-reverse-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-reverse-enter-from,
+.list-reverse-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-reverse-leave-active {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
 // key frames and styles

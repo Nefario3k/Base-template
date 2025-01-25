@@ -197,34 +197,18 @@ const svgLeftModules = shallowRef(null);
 const svgRightModules = shallowRef(null);
 const getComponent = (string: any) => {
   switch (string.toLowerCase()) {
-    case "hamburger":
-      return resolveComponent("SvgHamburger");
-    case "bin":
-      return resolveComponent("SvgBin");
-    case "filter/cog":
-      return resolveComponent("SvgFilterCog");
-    case "pencil":
-      return resolveComponent("SvgPencil");
-    case "dots":
-      return resolveComponent("SvgDots");
-    case "bell":
-      return resolveComponent("SvgBell");
-    case "switch":
-      return resolveComponent("SvgSwitch");
-    case "plus":
-      return resolveComponent("SvgPlus");
-    case "xmark":
-      return resolveComponent("SvgXMark");
-    case "arrow/left":
-      return resolveComponent("SvgArrowLeft");
-    case "arrow/right":
-      return resolveComponent("SvgArrowRight");
-    case "angle/down":
-      return resolveComponent("SvgAngleDown");
+    case "filter":
+      return resolveComponent("SvgFilter");
     case "angle/left":
       return resolveComponent("SvgAngleLeft");
     case "angle/right":
       return resolveComponent("SvgAngleRight");
+    case "angle/down":
+      return resolveComponent("SvgAngleDown");
+    case "poly":
+      return resolveComponent("SvgPoly");
+    case "dots":
+      return resolveComponent("SvgDots");
 
     default:
       console.log(string.toLowerCase());
